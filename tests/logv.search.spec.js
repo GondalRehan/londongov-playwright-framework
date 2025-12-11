@@ -39,6 +39,14 @@ test.describe('LGOV Search Functionality Test', () => {
         });
         
         console.log(`Test passed: Successfully searched for "${searchTerm}" and validated result relevance.`);
-    });
+       
+        await test.step('Sort results by Newest First', async () => {   
+            await searchResultsPage.sortByNewestFirst ()
+        });
+        
+        // await test.step('Filter results by Open status', async () => {   
+        //     await searchResultsPage.filterByOpen ()
+        // });
 
+    });
 });
